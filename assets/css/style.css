@@ -199,8 +199,8 @@ main{
 }
 
 
-/* media query for larger screen (1920px and up) */
-@media (min-width: 1920px) {
+/* media query for larger screen (768px and up) */
+@media (min-width: 768px) {
    .header {
     display: flex;
     justify-content: space-between;
