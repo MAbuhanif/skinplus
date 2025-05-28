@@ -200,7 +200,7 @@ main{
 
 
 /* media query for larger screen (1920px and up) */
-@media (min-width: 920px) {
+@media (min-width: 1920px) {
    .header {
     display: flex;
     justify-content: space-between;
