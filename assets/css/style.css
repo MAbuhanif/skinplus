@@ -9,6 +9,7 @@
 
 /* General Styles */
 body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   color: #333;
@@ -22,3 +23,76 @@ button {
   border: none;
   font: inherit;
 }
+
+/* Header */
+.header{
+  background-color: #fdfdfd;
+  padding: 0.5rem;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-logo{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+.nav-list {
+  gap: 1rem;
+  list-style: none;
+  background-color: #fdfdfd;
+}
+.nav-list li {
+  margin-bottom: 0.6rem;
+}
+
+nav{
+  position: absolute;
+  background-color: #fdfdfd;
+  width: 100%;
+  left: 0;
+  padding: 1rem;
+  display: none;
+  top: 100%;
+}
+.header-icons{
+  display: none;
+}
+
+/* navbar toggle styles */
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+}
+
+.header-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.header-nav.active {
+    display: flex;
+  }
+/* main content */
+main{
+  background-color: aqua;
+  flex: 1 0 auto;
+  margin-top: 47px;
+}
+
