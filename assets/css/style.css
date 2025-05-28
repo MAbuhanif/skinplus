@@ -106,6 +106,30 @@ main{
   width: 100%;
   background: url("../images/hero-bg.jpg") no-repeat center left/cover;
 }
+
+/* hero content */
+.hero-text {
+  font-size: 125%;
+  bottom: 20px;
+  width: 60%;
+  min-height: 200px;
+  padding-top: 100px;
+  padding-left: 20px;
+}
+
+.hero-text > h2 {
+    color: #ffffff;
+}
+.hero-text .btn {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #6f5e53;
+  font-size: 1rem;
+  font-weight:300;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
 /* media query for larger screen (1920px and up) */
 @media (min-width: 920px) {
    .header {
@@ -165,5 +189,14 @@ main{
   }
   main {
     margin-top: 0;
+  }
+  /* hero content */
+  .hero-text {
+    width: 400px;
+    padding-left: 3rem;
+    font-size: 200%;
+    bottom: 20px;
+    min-height: 400px;
+    padding-top: 135px;
   }
 }
