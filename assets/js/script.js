@@ -6,7 +6,7 @@
     nav.classList.toggle('active');
   });
 
-// Carousel functionality
+// carousel functionality
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.carousel-track');
   const leftBtn = document.querySelector('.carousel-btn-left');
