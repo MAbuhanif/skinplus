@@ -27,13 +27,13 @@ button {
 /* Header */
 .header{
   background-color: #fdfdfd;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   position: fixed;
   z-index: 99;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
 }
 
 header a {
@@ -45,13 +45,16 @@ header a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2rem;
+  margin: 0.5rem auto;
+  text-align: center;
+  display: block;
 }
 
 
 .nav-list {
   gap: 1rem;
   list-style: none;
-  background-color: #fdfdfd;
+  padding-left: 1rem;
 }
 .nav-list li {
   margin-bottom: 0.6rem;
@@ -72,10 +75,12 @@ nav{
 
 /* navbar toggle styles */
 .menu-toggle {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-}
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  }
 
 .header-nav {
   display: none;
@@ -91,8 +96,74 @@ nav{
   }
 /* main content */
 main{
-  background-color: aqua;
   flex: 1 0 auto;
-  margin-top: 47px;
+  margin-top: 32.4px;
 }
 
+/* hero section */
+#hero {
+  height: 300px;
+  width: 100%;
+  background: url("../images/hero-bg.jpg") no-repeat center left/cover;
+}
+/* media query for larger screen (1920px and up) */
+@media (min-width: 920px) {
+   .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;     
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    padding: 2rem  3rem;
+    z-index: 2;         
+  }
+  
+  .header-logo {
+    font-size: 2rem;
+  }
+  nav{
+    background-color: transparent;
+    font-size: 110%;
+    font-weight: bold;
+  }
+  
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .nav-list li {
+    margin-bottom: 0;
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 110%;
+    font-weight: bold;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    padding: 0;
+  }
+  #hero{
+    height: 400px;
+  }
+  main {
+    margin-top: 0;
+  }
+}
