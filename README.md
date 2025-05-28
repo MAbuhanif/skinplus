@@ -2,7 +2,7 @@
 
 ## Overview
 
-SkinPlus is a responsive landing page for a skincare brand, built with semantic HTML5, CSS (Flexbox), and vanilla JavaScript. The page features a modern navigation bar, a hero section, a product carousel, and is fully responsive for both desktop (1920px) and mobile (375px) screens.
+SkinPlus is a responsive landing page, built with semantic HTML5, CSS (Flexbox), and vanilla JavaScript. The page features a navigation bar, a hero section, a product carousel, and is responsive for both desktop (1920px) and mobile (375px) screens.
 
 ---
 
@@ -13,7 +13,6 @@ SkinPlus is a responsive landing page for a skincare brand, built with semantic 
   - `<main>`: Contains the hero section and products section (with carousel).
   - `<section>`: Used for logical grouping (hero, products).
   - `<nav>`: Navigation links with ARIA roles for accessibility.
-  - `<footer>`: (Not included, but recommended for future expansion).
 
 - **CSS (Flexbox & Media Queries):**  
   - Flexbox is used for layout alignment in the header and carousel.
@@ -24,6 +23,10 @@ SkinPlus is a responsive landing page for a skincare brand, built with semantic 
   - Handles navigation menu toggle for mobile.
   - Implements a basic, accessible carousel for product cards.
 
+- **Font Awesome Icons:**  
+  - Font Awesome is included via CDN for navigation and UI icons (e.g., menu, search, user, carousel arrows).
+  - Icons improve visual clarity and user experience.
+
 ---
 
 ## Mobile Responsiveness
@@ -32,7 +35,6 @@ SkinPlus is a responsive landing page for a skincare brand, built with semantic 
   - Mobile-first design with breakpoints for larger screens (`min-width: 1920px`).
   - On small screens, the navigation collapses into a hamburger menu, and the logo is centered.
   - On large screens, the navigation is horizontal and overlays the hero background image.
-  - All elements are sized and spaced for touch and readability.
 
 ---
 

@@ -40,6 +40,9 @@ header a {
   text-decoration: none;
   color: inherit;
 }
+header a:hover {
+  color: #6f5e53;
+}
 
 .header-logo{
   text-transform: uppercase;
@@ -49,8 +52,6 @@ header a {
   text-align: center;
   display: block;
 }
-
-
 .nav-list {
   gap: 1rem;
   list-style: none;
@@ -72,6 +73,14 @@ nav{
 .header-icons{
   display: none;
 }
+.icon-search, .icon-currency, .icon-user {
+  font-size: 1.25rem;
+  margin-left: 1rem;
+}
+.icon-search:hover, .icon-currency:hover, .icon-user:hover {
+  color: #6f5e53;
+}
+
 
 /* navbar toggle styles */
 .menu-toggle {
@@ -130,10 +139,13 @@ main{
   border-radius: 5px;
   border: none;
 }
+.hero-text .btn:hover {
+  background-color: #5a4c42;
+}
 
  /* Products Section */ 
 .products {
-  padding: 2rem;
+  padding: 0;
   background-color: #fff;
 }
 
@@ -144,6 +156,8 @@ main{
 
 .product-card h3, .product-card p {
   padding-left: 0.25rem;
+  padding-top: 0.5rem;
+  font-size: small;
 }
 
 .carousel {
@@ -166,18 +180,18 @@ main{
 }
 
 .product-card {
-  min-width: 200px;
+  min-width: 100px;
   background: #f9f9f9;
   text-align: start;
   flex-shrink: 0;
   list-style-type: none;
 }
 
-.product-card img{
-    max-width: 280px;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+.product-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 .carousel-btn {
@@ -190,13 +204,13 @@ main{
    .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     position: absolute;     
     top: 0;
     left: 0;
     width: 100%;
     background: transparent;
-    padding: 2rem  3rem;
+    padding: 0.5rem 2rem;
     z-index: 2;         
   }
   
@@ -253,5 +267,24 @@ main{
     bottom: 20px;
     min-height: 400px;
     padding-top: 135px;
+  }
+  /* product section */
+  .products {
+    padding: 2rem;
+  }
+  .products h2 {
+    margin-bottom: 2rem;
+    padding-left: 40px;
+  }
+  .product-card img{
+    width: 300px;
+    height: 220px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  } 
+  .product-card h3, .product-card p {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    font-size: large;
   }
 }
