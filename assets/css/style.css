@@ -25,6 +25,7 @@ button {
 }
 
 /* Header */
+/* Fixed header for mobile, overlays hero on desktop */
 .header{
   background-color: #fdfdfd;
   padding: 0 0.5rem;
@@ -36,6 +37,7 @@ button {
   align-items: center;
 }
 
+/* Logo and navigation links styling */
 header a {
   text-decoration: none;
   color: inherit;
@@ -52,6 +54,16 @@ header a:hover {
   text-align: center;
   display: block;
 }
+/* Mobile nav */
+nav{
+  position: absolute;
+  background-color: #fdfdfd;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  padding: 1rem;
+  display: none;
+}
 .nav-list {
   gap: 1rem;
   list-style: none;
@@ -60,16 +72,7 @@ header a:hover {
 .nav-list li {
   margin-bottom: 0.6rem;
 }
-
-nav{
-  position: absolute;
-  background-color: #fdfdfd;
-  width: 100%;
-  left: 0;
-  padding: 1rem;
-  display: none;
-  top: 100%;
-}
+/* Hide header icons on mobile, show on desktop */
 .header-icons{
   display: none;
 }
@@ -82,7 +85,7 @@ nav{
 }
 
 
-/* navbar toggle styles */
+/* toggle button for mobile */
 .menu-toggle {
   position: absolute;
   right: 1rem;
@@ -90,44 +93,35 @@ nav{
   transform: translateY(-50%);
   display: block;
   }
-
-.header-nav {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  left: 0;
-  padding: 0 1rem;
-  width: 100%;
-}
-
+/* Show nav when active (JS toggles .active) */
 .header-nav.active {
-    display: flex;
+  display: flex;
   }
 /* main content */
 main{
   flex: 1 0 auto;
-  margin-top: 32.4px;
+  margin-top: 40.4px;
 }
 
 /* hero section */
+/* Hero background image and sizing */
 #hero {
   height: 300px;
   width: 100%;
   background: url("../images/hero-bg.jpg") no-repeat center left/cover;
 }
 
-/* hero content */
+/* Hero text styling */
 .hero-text {
   font-size: 125%;
-  bottom: 20px;
-  width: 60%;
+  width: 70%;
   min-height: 200px;
   padding-top: 100px;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 .hero-text > h2 {
-    color: #ffffff;
+  color: #ffffff;
 }
 .hero-text .btn {
   margin-top: 1rem;
@@ -150,20 +144,16 @@ main{
 }
 
 .products h2 {
-  margin-bottom: 1rem;
-  padding-left: 40px;
+  padding: 1rem 0;
+  margin-left: 40px;
 }
-
-.product-card h3, .product-card p {
-  padding-left: 0.25rem;
-  padding-top: 0.5rem;
-  font-size: small;
-}
-
+/* carousel */
+/* Carousel container and track for horizontal scrolling */
 .carousel {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .carousel-track-container {
@@ -179,23 +169,28 @@ main{
   gap: 1rem;
 }
 
+/* Product card styling */
 .product-card {
-  min-width: 100px;
-  background: #f9f9f9;
+  background: #fdfdfd;
   text-align: start;
-  flex-shrink: 0;
   list-style-type: none;
+  border-radius: 5px;
 }
 
 .product-card img {
-  width: 150px;
   height: 150px;
+  object-fit: cover;
   border-radius: 5px;
-  margin-bottom: 1rem;
+}
+
+.product-card h3, .product-card p {
+  padding-left: 0.25rem;
+  padding-top: 0.5rem;
+  font-size: small;
 }
 
 .carousel-btn {
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
 }
 
 
@@ -208,10 +203,8 @@ main{
     position: absolute;     
     top: 0;
     left: 0;
-    width: 100%;
     background: transparent;
-    padding: 0.5rem 2rem;
-    z-index: 2;         
+    padding: 0.5rem 2rem;        
   }
   
   .header-logo {
@@ -220,9 +213,14 @@ main{
     padding-top: 0.5rem;
   }
   nav{
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    padding: 0;
     background-color: transparent;
     font-size: 110%;
-    font-weight: bold;
+    font-weight: normal;
   }
   
   .nav-list {
@@ -248,45 +246,32 @@ main{
     display: none;
   }
   
-  .header-nav {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    width: auto;
-    padding: 0;
-  }
-  #hero{
-    height: 400px;
-  }
   main {
     margin-top: 0;
   }
   /* hero content */
+   #hero{
+    height: 400px;
+  }
   .hero-text {
     width: 400px;
     padding-left: 4rem;
     font-size: 200%;
-    bottom: 20px;
     min-height: 400px;
     padding-top: 135px;
   }
   /* product section */
   .products {
-    padding: 2rem;
+    padding: 1rem;
   }
-  .products h2 {
-    margin-bottom: 2rem;
-    padding-left: 40px;
-  }
+
   .product-card img{
     width: 300px;
     height: 220px;
-    border-radius: 5px;
     margin-bottom: 1rem;
   } 
   .product-card h3, .product-card p {
     padding-left: 0.5rem;
-    padding-top: 0.5rem;
     font-size: large;
   }
 }
